@@ -1,0 +1,15 @@
+For each model, a paragraph or two describing:  
+what features you gave it (raw inputs, selected inputs, non-linear feature expansions, etc.); 
+how was it trained (learning algorithm and software source); 
+and key hyperparameter settings (plus your approach to choosing those settings).
+
+This was a method in which all of us were inexperienced; we had all utilized the Random Forest classifier for the fourth homework assignment, 
+so it was decided that we would branch out and attempt to gain some practice with using Gradient Boosting. This was a choice that will hopefully 
+behoove us in the long run, but also made working on this project more intriguing.
+
+In our model, we used a gradient boosted decision tree model; with each iteration of the for loop, we initialize a new decision tree classifier 
+with a maxDepth value of 10. Initially, when we were testing it with a maxDepth of 3, the results were not terrible (around 0.68), but starting 
+the gradient model with too simple a classifier would not yield AUC values for which we were aiming. Additionally, we decreased the step size 
+to 0.05 in order to be more precise in our corrections for each iteration. While the overall process was slower as a result, the gain in accuracy 
+was well worth the extended runtime. We also explored how feature selection affected the boosting model, and we wound using <blank> of the original 
+features. 
